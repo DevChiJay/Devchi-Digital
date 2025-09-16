@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 
@@ -12,8 +11,7 @@ export const metadata: Metadata = {
 export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      <div className="pt-24 pb-16">
+      <div className="py-6">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back Button */}
           <Link

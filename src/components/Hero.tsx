@@ -5,7 +5,6 @@ import { ArrowRight, Code, Smartphone, TrendingUp } from "lucide-react";
 import { motion } from "motion/react";
 
 import { Input } from "@/components/ui/input";
-import Navbar from "@/components/Navbar";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
@@ -24,10 +23,8 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-green-400 to-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
-      <Navbar />
-
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <motion.div 
