@@ -7,27 +7,27 @@ import Link from "next/link";
 const services = [
   {
     icon: Code,
-    title: "Web Design",
+    title: "Web Development",
     description: "Custom websites built with modern technologies, responsive design, and optimized for performance.",
     features: ["Responsive Design", "E-commerce Solutions", "CMS Integration", "Performance Optimization"],
     color: "from-blue-500 to-blue-600",
     bgColor: "from-blue-50 to-blue-100"
   },
   {
-    icon: TrendingUp,
-    title: "SEO Optimization", 
-    description: "Comprehensive SEO strategies to improve your search rankings and drive organic traffic.",
-    features: ["Keyword Research", "On-page SEO", "Technical SEO", "Analytics & Reporting"],
-    color: "from-green-500 to-green-600",
-    bgColor: "from-green-50 to-green-100"
+    icon: Code,
+    title: "Custom API",
+    description: "Tailored API development for seamless integration between your systems and third-party services.",
+    features: ["RESTful APIs", "GraphQL", "Microservices", "Authentication & Security"],
+    color: "from-yellow-500 to-yellow-600",
+    bgColor: "from-yellow-50 to-yellow-100"
   },
   {
-    icon: Smartphone,
-    title: "App Development",
-    description: "Native and cross-platform mobile applications for iOS and Android platforms.",
-    features: ["iOS & Android", "Cross-platform", "API Integration", "App Store Deployment"],
-    color: "from-purple-500 to-purple-600",
-    bgColor: "from-purple-50 to-purple-100"
+    icon: TrendingUp,
+    title: "AI & Machine Learning",
+    description: "Intelligent solutions that leverage AI and machine learning to automate processes and gain insights.",
+    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automated Solutions"],
+    color: "from-green-500 to-green-600",
+    bgColor: "from-green-50 to-green-100"
   }
 ];
 
@@ -35,7 +35,7 @@ export default function ServicesSection() {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50/50"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -47,11 +47,8 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            What We Do
+            Explore Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive digital solutions to help your business grow and succeed in the digital landscape.
-          </p>
         </motion.div>
 
         {/* Services Grid */}
@@ -111,7 +108,7 @@ export default function ServicesSection() {
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
-              Web Design, SEO, App Development & more.
+              Mobile Development, DevOps, SPAs & more.
             </h3>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
               Ready to take your business to the next level? Let's discuss how our digital solutions can help you achieve your goals.

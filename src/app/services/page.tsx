@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
+import { Code, TrendingUp, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Services - Devchi Digital",
-  description: "Professional web design, SEO optimization, and mobile app development services for businesses in Nigeria and beyond.",
+  description: "Professional web development, mobile apps, AI & ML, custom APIs, DevOps, and SPA development services for businesses in Nigeria and beyond.",
 };
 
 export default function ServicesPage() {
@@ -21,16 +22,14 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Web Design Service */}
+            {/* Web Development */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Design</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
               <p className="text-gray-600 mb-6">
-                Custom website design and development using modern technologies like React, Next.js, and responsive design principles.
+                Custom websites built with modern technologies, responsive design, and optimized for performance.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li>• Responsive Design</li>
@@ -40,41 +39,88 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            {/* SEO Service */}
+            {/* Custom API */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mb-6">
+                <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">SEO Optimization</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom API</h3>
               <p className="text-gray-600 mb-6">
-                Comprehensive SEO strategies to improve your search engine rankings and drive organic traffic to your website.
+                Tailored API development for seamless integration between your systems and third-party services.
               </p>
               <ul className="space-y-2 text-gray-600">
-                <li>• Keyword Research</li>
-                <li>• On-page Optimization</li>
-                <li>• Technical SEO</li>
-                <li>• Analytics & Reporting</li>
+                <li>• RESTful APIs</li>
+                <li>• GraphQL</li>
+                <li>• Microservices</li>
+                <li>• Authentication & Security</li>
               </ul>
             </div>
 
-            {/* App Development Service */}
+            {/* AI & Machine Learning */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">App Development</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
               <p className="text-gray-600 mb-6">
-                Native and cross-platform mobile app development for iOS and Android using React Native and modern frameworks.
+                Intelligent solutions that leverage AI and machine learning to automate processes and gain insights.
               </p>
               <ul className="space-y-2 text-gray-600">
-                <li>• iOS & Android Apps</li>
-                <li>• Cross-platform Solutions</li>
+                <li>• Predictive Analytics</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision</li>
+                <li>• Automated Solutions</li>
+              </ul>
+            </div>
+
+            {/* Mobile Development */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Development</h3>
+              <p className="text-gray-600 mb-6">
+                Native and cross-platform mobile applications for iOS and Android platforms.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>• iOS & Android</li>
+                <li>• Cross-platform</li>
                 <li>• API Integration</li>
                 <li>• App Store Deployment</li>
+              </ul>
+            </div>
+
+            {/* DevOps */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">DevOps</h3>
+              <p className="text-gray-600 mb-6">
+                Streamline your development processes with continuous integration, delivery, and infrastructure management.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>• CI/CD Pipelines</li>
+                <li>• Cloud Infrastructure</li>
+                <li>• Containerization</li>
+                <li>• Monitoring & Logging</li>
+              </ul>
+            </div>
+
+            {/* Single Page Apps (SPA) */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-6">
+                <Code className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Single Page Apps (SPA)</h3>
+              <p className="text-gray-600 mb-6">
+                Fast, responsive, and interactive single page applications with modern frontend frameworks.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>• React</li>
+                <li>• Vue.js</li>
+                <li>• Angular</li>
+                <li>• State Management</li>
               </ul>
             </div>
           </div>

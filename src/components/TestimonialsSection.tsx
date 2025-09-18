@@ -6,28 +6,28 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Chinelo Okeke",
-    company: "Tech Solutions Ltd",
-    role: "CEO",
-    content: "Webdev.ng built our school website in asaba, fast and exactly as needed... great experience!",
+    name: "Michael Obinna",
+    company: "Macorn Solutions Ltd",
+    role: "Senior Developer Advocate",
+    content: "Working with Devchi Digital was a game-changer. He understood my requirements perfectly and built a seamless solution with excellent UI/UX. Professional, reliable, and highly skilled!",
     rating: 5,
     image: "/api/placeholder/60/60"
   },
   {
     id: 2,
-    name: "Ibrahim Musa",
-    company: "Digital Marketing Pro",
+    name: "Cynthia Hilary",
+    company: "Matt-Hilary Enterprises",
     role: "Marketing Director", 
-    content: "Their SEO services helped us rank higher in search results in asaba. Highly recommend.",
+    content: "If you need a developer team who truly understands modern web technologies, Devchi Digital is the place. They built a custom solution tailored to my needs, and the end result was flawless!",
     rating: 5,
     image: "/api/placeholder/60/60"
   },
   {
     id: 3,
-    name: "Amaka Okafor",
-    company: "E-commerce Store",
+    name: "Lawrence Chukwudi",
+    company: "Nonseman Technology",
     role: "Founder",
-    content: "Professional team, quick support, and excellent delivery of our e-commerce website.",
+    content: "Superb developer! Dev Chi optimized my website’s performance and improved load times significantly. He’s efficient, knowledgeable, and always delivers high-quality work.",
     rating: 5,
     image: "/api/placeholder/60/60"
   }
