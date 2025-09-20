@@ -1,10 +1,6 @@
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "About Us - Devchi Digital",
-  description: "Learn about Devchi Digital - a leading web design, SEO, and app development agency committed to helping businesses succeed online.",
-};
+import Approach from "@/components/Approach";
 
 export default function AboutPage() {
   return (
@@ -14,7 +10,7 @@ export default function AboutPage() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              About Devchi Digital
+              About Devchi Digital Ltd
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are more than a digital agency. We build great websites, mobile apps, and deliver SEO services that help businesses thrive in the digital world.
@@ -26,16 +22,18 @@ export default function AboutPage() {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To empower businesses with cutting-edge digital solutions that drive growth, enhance user experience, and create lasting value in an increasingly connected world.
+                To empower businesses with digital solutions that drive growth, enhance user experience, and create lasting value in an increasingly connected world.
               </p>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To be the leading digital agency in Nigeria, known for delivering exceptional web design, SEO, and mobile app development services that exceed client expectations.
+                To be the cornerstone of digital transformation in Nigeria, known for delivering cutting-edge solutions that exceeds client expectations, encompassing software development, API integrations, creative design, and much more.
               </p>
             </div>
           </div>
+
+          <Approach />
 
           {/* Why Choose Us */}
           <div className="mb-16">

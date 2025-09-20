@@ -13,6 +13,7 @@ import {
   MessageSquare,
   ChevronRight,
   ChevronLeft,
+  User,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -21,8 +22,9 @@ import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
-  { name: "Services", href: "/services", icon: Settings },
   { name: "About", href: "/about", icon: Users },
+  { name: "Services", href: "/services", icon: Settings },
+  { name: "Portfolio", href: "/portfolio", icon: User },
   { name: "Contact", href: "/contact", icon: MessageSquare },
 ];
 

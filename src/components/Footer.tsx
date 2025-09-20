@@ -2,7 +2,8 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ export default function Footer() {
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -26,28 +27,25 @@ export default function Footer() {
               viewport={{ once: true }}
               className="lg:col-span-1"
             >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
+              <div className="flex items-center space-x-2 mb-6">                
+                <div className="w-8 h-8">
+                  <Image src="/logo.png" width={40} height={40} alt="Logo" />
                 </div>
                 <span className="text-2xl font-bold">Devchi Digital</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                We build great websites, mobile apps, and deliver SEO services that help businesses thrive in the digital world.
+                We build great websites, mobile apps and custom APIs that help businesses thrive in the digital world.
               </p>
               
               {/* Social Links */}
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
-                  <Facebook className="w-5 h-5" />
+                <a href="https://github.com/DevChiJay" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <a href="https://x.com/DevChiJay" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <a href="https://www.linkedin.com/in/chiemela-james-3681b5246/" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
@@ -78,8 +76,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-                    Blog
+                  <Link href="/portfolio" className="text-gray-300 hover:text-white transition-colors">
+                    Portfolio
                   </Link>
                 </li>
                 <li>
@@ -90,42 +88,6 @@ export default function Footer() {
               </ul>
             </motion.div>
 
-            {/* Services */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-lg font-bold mb-6">Services</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Web Design & Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    SEO Optimization
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Mobile App Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    E-commerce Solutions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Digital Marketing
-                  </a>
-                </li>
-              </ul>
-            </motion.div>
 
             {/* Contact Info */}
             <motion.div
@@ -144,14 +106,14 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                  <a href="mailto:hello@devchi.digital" className="text-gray-300 hover:text-white transition-colors">
-                    hello@devchi.digital
+                  <a href="mailto:support@devchi.me" className="text-gray-300 hover:text-white transition-colors">
+                    support@devchi.me
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                  <a href="tel:+234xxxxxxxxx" className="text-gray-300 hover:text-white transition-colors">
-                    +234 xxx xxx xxxx
+                  <a href="tel:+2347011655197" className="text-gray-300 hover:text-white transition-colors">
+                    +234 701 165 5197
                   </a>
                 </div>
               </div>
@@ -174,7 +136,7 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-300 text-sm">
-                © {currentYear} Devchi Digital. All rights reserved.
+                © {currentYear} Devchi Digital Ltd. All rights reserved.
               </div>
               <div className="flex space-x-6 text-sm">
                 <Link href="#" className="text-gray-300 hover:text-white transition-colors">

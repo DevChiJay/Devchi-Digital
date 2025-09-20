@@ -1,35 +1,9 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Code, TrendingUp, Smartphone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-const services = [
-  {
-    icon: Code,
-    title: "Web Development",
-    description: "Custom websites built with modern technologies, responsive design, and optimized for performance.",
-    features: ["Responsive Design", "E-commerce Solutions", "CMS Integration", "Performance Optimization"],
-    color: "from-blue-500 to-blue-600",
-    bgColor: "from-blue-50 to-blue-100"
-  },
-  {
-    icon: Code,
-    title: "Custom API",
-    description: "Tailored API development for seamless integration between your systems and third-party services.",
-    features: ["RESTful APIs", "GraphQL", "Microservices", "Authentication & Security"],
-    color: "from-yellow-500 to-yellow-600",
-    bgColor: "from-yellow-50 to-yellow-100"
-  },
-  {
-    icon: TrendingUp,
-    title: "AI & Machine Learning",
-    description: "Intelligent solutions that leverage AI and machine learning to automate processes and gain insights.",
-    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automated Solutions"],
-    color: "from-green-500 to-green-600",
-    bgColor: "from-green-50 to-green-100"
-  }
-];
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import { services } from "@/data";
 
 export default function ServicesSection() {
   return (

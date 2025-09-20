@@ -3,62 +3,13 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { PinContainer } from '@/components/ui/Pin';
-
-// Define a type for our projects
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  techStack: string[];
-  thumbnail: string;
-  fullImage: string;
-  url: string;
-}
-
-// Sample projects data
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Calculate.ng',
-    description: 'Your comprehensive Nigerian calculator suite featuring BMI, Tax, and Inflation calculators. Simplifying complex calculations for everyday Nigerians.',
-    techStack: ['Next.js', 'Tailwind CSS', 'Typescript', 'Framer motion'],
-    thumbnail: '/projects/calculate.png',
-    fullImage: '/projects/calculate.png',
-    url: 'https://calculate.ng'
-  },
-  {
-    id: 2,
-    title: 'Capp.to',
-    description: 'The ultimate modern URL shortener with instant QR code generation!  Simplify your links and track clicks with ease.',
-    techStack: ['Next.js', 'Node.js', 'Tailwind CSS', 'Typescript'],
-    thumbnail: '/projects/capp.png',
-    fullImage: '/projects/capp.png',
-    url: 'https://capp.to'
-  },
-  {
-    id: 3,
-    title: 'Zentry Animated Landing Page',
-    description: 'A landing page for Zentry, a web3 project, featuring GSAP animations and a modern design.',
-    techStack: ['React', 'Tailwind CSS', 'GSap', 'Framer motion'],
-    thumbnail: '/projects/awwards.png',
-    fullImage: '/projects/awwards.png',
-    url: 'https://zentry-awards.web.app/'
-  },
-  {
-    id: 4,
-    title: 'API Management Portal',
-    description: 'A web-based API management portal built with Next.js and Tailwind CSS.',
-    techStack: ['Node.js', 'Next.js', 'MongoDB', 'Typescript'],
-    thumbnail: '/projects/portal.png',
-    fullImage: '/projects/portal.png',
-    url: 'https://portal.devchihub.com/'
-  }
-];
+import { projects } from '@/data';
+import { Project } from '@/data/types';
 
 export default function ProjectsSection() {
   
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+    <section id='projects' className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>

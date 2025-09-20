@@ -2,36 +2,7 @@
 
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Michael Obinna",
-    company: "Macorn Solutions Ltd",
-    role: "Senior Developer Advocate",
-    content: "Working with Devchi Digital was a game-changer. He understood my requirements perfectly and built a seamless solution with excellent UI/UX. Professional, reliable, and highly skilled!",
-    rating: 5,
-    image: "/api/placeholder/60/60"
-  },
-  {
-    id: 2,
-    name: "Cynthia Hilary",
-    company: "Matt-Hilary Enterprises",
-    role: "Marketing Director", 
-    content: "If you need a developer team who truly understands modern web technologies, Devchi Digital is the place. They built a custom solution tailored to my needs, and the end result was flawless!",
-    rating: 5,
-    image: "/api/placeholder/60/60"
-  },
-  {
-    id: 3,
-    name: "Lawrence Chukwudi",
-    company: "Nonseman Technology",
-    role: "Founder",
-    content: "Superb developer! Dev Chi optimized my website’s performance and improved load times significantly. He’s efficient, knowledgeable, and always delivers high-quality work.",
-    rating: 5,
-    image: "/api/placeholder/60/60"
-  }
-];
+import { testimonials } from "@/data";
 
 export default function TestimonialsSection() {
   return (
