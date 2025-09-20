@@ -17,7 +17,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import Image from "next/image";
 
 const navigation = [
@@ -41,6 +42,11 @@ export default function LayoutWithSidebar({
 
   // For mobile menu
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Close the mobile sidebar after navigation completes
+  useEffect(() => {
+    if (mobileOpen) setMobileOpen(false);
+  }, [pathname]);
 
   // Load collapsed state from localStorage on client side
   useEffect(() => {
@@ -100,7 +106,7 @@ export default function LayoutWithSidebar({
               )}
             >
               <div className="w-8 h-8">
-                <Image src="/logo.png" width={40} height={40} alt="Logo" />
+                <Image src="/logo.png" width={40} height={40} alt="Logo" unoptimized />
               </div>
               {!collapsed && (
                 <span className="ml-3 text-lg font-semibold">
@@ -192,13 +198,13 @@ export default function LayoutWithSidebar({
         <div className="flex items-center justify-between h-16 px-4">
           <Link href="/" className="flex items-center">
             <div className="w-8 h-8">
-              <Image src="/logo.png" width={40} height={40} alt="Logo" />
+              <Image src="/logo.png" width={40} height={40} alt="Logo" unoptimized />
             </div>
             <span className="ml-3 text-lg font-semibold">Devchi Digital</span>
           </Link>
 
           {/* Mobile menu button */}
-          <Sheet>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="p-2">
                 <Menu className="h-6 w-6" />
@@ -206,10 +212,13 @@ export default function LayoutWithSidebar({
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-0 w-[300px] sm:w-[350px]">
+              <VisuallyHidden>
+                <SheetTitle>Mobile navigation</SheetTitle>
+              </VisuallyHidden>
               <div className="flex flex-col h-full">
                 <div className="p-4 border-b flex items-center">
                   <div className="w-8 h-8">
-                    <Image src="/logo.png" width={40} height={40} alt="Logo" />
+                    <Image src="/logo.png" width={40} height={40} alt="Logo" unoptimized />
                   </div>
                   <span className="ml-3 text-lg font-semibold">
                     Devchi Digital

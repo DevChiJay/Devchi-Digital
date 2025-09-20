@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Approach from "@/components/Approach";
 

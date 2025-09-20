@@ -1,15 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Metadata } from "next";
+import axios from "axios"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    company: "",
-    message: ""
+    message: "",
+    sendTo: "support@devchi.me", // Hidden field
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,13 +20,23 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-    // Reset form
-    setFormData({ name: "", email: "", company: "", message: "" });
-    alert("Thank you for your message! We'll get back to you soon.");
+
+    try {
+      const response = await axios.post("https://api.devchi.fun/contact-us", formData)
+      toast.success("Thank you for your message! We'll get back to you soon.!")
+      // Reset form after successful submission
+      setFormData({
+        fullName: "",
+        email: "",
+        message: "",
+        sendTo: "support@devchi.me",
+      })
+    } catch (error) {
+      console.error("Form submission error:", error)
+      toast.error("Failed to send message. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -35,6 +48,18 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -53,15 +78,15 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="fullName"
+                    name="fullName"
                     required
-                    value={formData.name}
+                    value={formData.fullName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="Your full name"
@@ -81,21 +106,6 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                    placeholder="Your company name"
                   />
                 </div>
 
@@ -139,7 +149,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-900">Office Address</h3>
-                      <p className="text-gray-600">Lagos, Nigeria</p>
+                      <p className="text-gray-600">5 Olaide Benson, Maryland Lagos, Nigeria</p>
                     </div>
                   </div>
 
@@ -151,7 +161,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-900">Email</h3>
-                      <p className="text-gray-600">hello@devchi.digital</p>
+                      <p className="text-gray-600">support@devchi.me</p>
                     </div>
                   </div>
 
@@ -163,7 +173,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+234 xxx xxx xxxx</p>
+                      <p className="text-gray-600">+234 701 165 5197</p>
                     </div>
                   </div>
                 </div>

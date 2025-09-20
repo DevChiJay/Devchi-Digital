@@ -103,6 +103,7 @@ export default function PortfolioSection() {
                       width={320}
                       height={320}
                       className="w-full h-full object-cover"
+                      unoptimized
                     />
                   </div>
                 </div>

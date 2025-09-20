@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <div className="flex items-center space-x-2 mb-6">                
                 <div className="w-8 h-8">
-                  <Image src="/logo.png" width={40} height={40} alt="Logo" />
+                  <Image src="/logo.png" width={40} height={40} alt="Logo" unoptimized />
                 </div>
                 <span className="text-2xl font-bold">Devchi Digital</span>
               </div>
@@ -142,11 +142,8 @@ export default function Footer() {
                 <Link href="#" className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
                   Terms of Service
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Cookie Policy
                 </Link>
               </div>
             </div>

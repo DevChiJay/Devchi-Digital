@@ -68,11 +68,11 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight break-words"
               >
                 Transforming Ideas into{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  <br />{displayedText}<span className="animate-pulse">|</span>
+                  <br className="block sm:hidden" />{displayedText}<span className="animate-pulse">|</span>
                 </span>
               </motion.h1>
 
@@ -80,7 +80,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-2xl"
+                className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-full sm:max-w-2xl break-words"
               >
                 We develop web and mobile applications for large and small businesses.
               </motion.p>
@@ -131,7 +131,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex"
           >
             <div className="relative">
               {/* Main Services Cards */}
